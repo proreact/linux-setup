@@ -2,14 +2,8 @@ typeset -U config_files
 export LANG=en_US.utf8
 source $HOME/.zsh.d/custom.zsh
 
-if  ! which antibody > /dev/null; then
-  curl -sL git.io/antibody | sh -s
-  if [[ ! -f "$HOME/.zsh.d/zsh_plugins.zsh" ]]; then
-    antibody bundle < $HOME/.dots/.zsh_plugins.txt > ~/.zsh.d/zsh_plugins.zsh
-  fi
-fi
 if [[ ! -f "$HOME/.zsh.d/zsh_plugins.zsh" ]]; then
-    antibody bundle < $HOME/.dots/.zsh_plugins.txt > ~/.zsh.d/zsh_plugins.zsh
+    antibody bundle < $HOME/.zsh_plugins.txt > ~/.zsh.d/zsh_plugins.zsh
 fi
 
 # Make sure prompt is able to be generated properly.
@@ -18,7 +12,7 @@ setopt prompt_subst
 source $HOME/.zsh.d/custom.zsh
 
 export _ZL_DATA="$HOME/.config/z.txt"
-export ZSH_CACHE_DIR="/home/tfn/.zsh_cache"
+export ZSH_CACHE_DIR="${HOME}/.zsh_cache"
 source $HOME/.zsh.d/zsh_plugins.zsh
 
 bindkey '^R' history-substring-search-up
@@ -65,11 +59,5 @@ SPACESHIP_RPROMPT_ORDER=(
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_BATTERY_SHOW=always
 export ZSH_PLUGINS_ALIAS_TIPS_EXPAND=0
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/tfn/.local/google-cloud-sdk/path.zsh.inc' ]; then . '/home/tfn/.local/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/tfn/.local/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/tfn/.local/google-cloud-sdk/completion.zsh.inc'; fi
 
 eval "$(direnv hook zsh)"

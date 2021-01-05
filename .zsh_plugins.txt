@@ -1,0 +1,25 @@
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
+zsh-users/zsh-history-substring-search
+zsh-users/zsh-autosuggestions
+skywind3000/z.lua
+robbyrussell/oh-my-zsh path:lib
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/github
+robbyrussell/oh-my-zsh path:plugins/common-aliases
+#robbyrussell/oh-my-zsh path:plugins/git-flow
+robbyrussell/oh-my-zsh path:plugins/compleat
+robbyrussell/oh-my-zsh path:plugins/npm
+robbyrussell/oh-my-zsh path:plugins/nvm
+robbyrussell/oh-my-zsh path:plugins/command-not-found
+robbyrussell/oh-my-zsh path:plugins/thefuck
+robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/git-extras
+robbyrussell/oh-my-zsh path:plugins/ssh-agent
+robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+robbyrussell/oh-my-zsh path:plugins/history
+djui/alias-tips
+drgr33n/oh-my-zsh_aws2-plugin path:aws2
+#Theme
+#caiogondim/bullet-train-oh-my-zsh-theme 
+denysdovhan/spaceship-prompt
